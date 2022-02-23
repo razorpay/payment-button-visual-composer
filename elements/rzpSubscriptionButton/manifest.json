@@ -1,0 +1,22 @@
+{
+  "elements": {
+    "rzpSubscriptionButton": {
+      "settings": {
+        "name": "Razorpay Subscription Button",
+        "metaThumbnailUrl": "[publicPath]/text-element-thumbnail.png",
+        "metaPreviewUrl": "[publicPath]/text-element-preview.png",
+        "metaDescription": "Razorpay Subscription Button that allows you to accept recurring payments"
+      },
+      "phpFiles": [
+        "RzpSubscriptionButtonController.php"
+      ]
+    }
+  },
+  "categories": {
+    "Button": {
+      "elements": [
+        "rzpSubscriptionButton"
+      ]
+    }
+  }
+}
