@@ -1,0 +1,42 @@
+"use strict";
+/*
+ * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+(self["vcvWebpackJsonp4x"] = self["vcvWebpackJsonp4x"] || []).push([["element"],{
+
+/***/ "./rzpPaymentButton/component.js":
+/*!***************************************!*\
+  !*** ./rzpPaymentButton/component.js ***!
+  \***************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": function() { return /* binding */ RzpPaymentButton; }\n/* harmony export */ });\n/* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/extends */ \"./node_modules/@babel/runtime/helpers/esm/extends.js\");\n/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ \"./node_modules/@babel/runtime/helpers/esm/classCallCheck.js\");\n/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ \"./node_modules/@babel/runtime/helpers/esm/createClass.js\");\n/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ \"./node_modules/@babel/runtime/helpers/esm/inherits.js\");\n/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ \"./node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js\");\n/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ \"./node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var vc_cake__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vc-cake */ \"./node_modules/vc-cake/index.js\");\n/* harmony import */ var vc_cake__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(vc_cake__WEBPACK_IMPORTED_MODULE_7__);\n\n\n\n\n\n\n\nfunction _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0,_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__[\"default\"])(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0,_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__[\"default\"])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0,_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__[\"default\"])(this, result); }; }\n\nfunction _isNativeReflectConstruct() { if (typeof Reflect === \"undefined\" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === \"function\") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }\n\n\n\nvar vcvAPI = (0,vc_cake__WEBPACK_IMPORTED_MODULE_7__.getService)('api');\n\nvar RzpPaymentButton = /*#__PURE__*/function (_vcvAPI$elementCompon) {\n  (0,_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__[\"default\"])(RzpPaymentButton, _vcvAPI$elementCompon);\n\n  var _super = _createSuper(RzpPaymentButton);\n\n  function RzpPaymentButton() {\n    (0,_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(this, RzpPaymentButton);\n\n    return _super.apply(this, arguments);\n  }\n\n  (0,_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(RzpPaymentButton, [{\n    key: \"render\",\n    value: function render() {\n      var _this$props = this.props,\n          id = _this$props.id,\n          atts = _this$props.atts,\n          editor = _this$props.editor;\n      var doAll = this.applyDO('all');\n      var sourceDropdown = this.props.atts.sourceDropdown;\n\n      if (sourceDropdown && sourceDropdown !== '0') {\n        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement(\"div\", (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__[\"default\"])({}, editor, {\n          id: \"el-\".concat(id)\n        }, doAll), \"Use below button to pay\", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement(\"form\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement(\"script\", {\n          src: \"https://cdn.razorpay.com/static/widget/payment-button.js\",\n          \"data-plugin\": \"wordpress-payment-button-visual-composer-1.0\",\n          \"data-payment_button_id\": sourceDropdown\n        })));\n      } else {\n        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement(\"div\", (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__[\"default\"])({}, editor, {\n          id: \"el-\".concat(id)\n        }, doAll), \"Please select payment button\");\n      }\n    }\n  }]);\n\n  return RzpPaymentButton;\n}(vcvAPI.elementComponent);\n\n\n\n//# sourceURL=webpack://razorpay/./rzpPaymentButton/component.js?");
+
+/***/ }),
+
+/***/ "./rzpPaymentButton/index.js":
+/*!***********************************!*\
+  !*** ./rzpPaymentButton/index.js ***!
+  \***********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vc_cake__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vc-cake */ \"./node_modules/vc-cake/index.js\");\n/* harmony import */ var vc_cake__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vc_cake__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./component */ \"./rzpPaymentButton/component.js\");\n/* eslint-disable import/no-webpack-loader-syntax */\n\n\nvar vcvAddElement = (0,vc_cake__WEBPACK_IMPORTED_MODULE_0__.getService)('cook').add;\nvcvAddElement(__webpack_require__(/*! ./settings.json */ \"./rzpPaymentButton/settings.json\"), // Component callback\nfunction (component) {\n  component.add(_component__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\n});\n\n//# sourceURL=webpack://razorpay/./rzpPaymentButton/index.js?");
+
+/***/ }),
+
+/***/ "./rzpPaymentButton/settings.json":
+/*!****************************************!*\
+  !*** ./rzpPaymentButton/settings.json ***!
+  \****************************************/
+/***/ (function(module) {
+
+eval("module.exports = JSON.parse('{\"sourceDropdown\":{\"type\":\"dropdown\",\"access\":\"public\",\"value\":\"\",\"options\":{\"label\":\"Razorpay Payment button\",\"global\":\"rzpPaymentBtn\",\"description\":\"The selected payment button will be shown on the frontend page, test it out in page preview\"}},\"designOptions\":{\"type\":\"designOptions\",\"access\":\"public\",\"value\":{},\"options\":{\"label\":\"Design Options\"}},\"editFormTab1\":{\"type\":\"group\",\"access\":\"protected\",\"value\":[\"sourceDropdown\",\"metaCustomId\",\"customClass\"],\"options\":{\"label\":\"General\"}},\"metaEditFormTabs\":{\"type\":\"group\",\"access\":\"protected\",\"value\":[\"editFormTab1\",\"designOptions\"]},\"relatedTo\":{\"type\":\"group\",\"access\":\"protected\",\"value\":[\"General\"]},\"tag\":{\"access\":\"protected\",\"type\":\"string\",\"value\":\"rzpPaymentButton\"}}');\n\n//# sourceURL=webpack://razorpay/./rzpPaymentButton/settings.json?");
+
+/***/ })
+
+},[['./rzpPaymentButton/index.js']]]);

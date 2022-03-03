@@ -1,0 +1,22 @@
+{
+  "elements": {
+    "rzpPaymentButton": {
+      "settings": {
+        "name": "Razorpay Payment Button",
+        "metaThumbnailUrl": "[publicPath]/payment-button-element-thumbnail.png",
+        "metaPreviewUrl": "[publicPath]/payment-button-element-preview.png",
+        "metaDescription": "A simple Razorpay Payment Button to collect online payments or donations"
+      },
+      "phpFiles": [
+        "RzpPaymentButtonController.php"
+      ]
+    }
+  },
+  "categories": {
+    "Button": {
+      "elements": [
+        "rzpPaymentButton"
+      ]
+    }
+  }
+}
