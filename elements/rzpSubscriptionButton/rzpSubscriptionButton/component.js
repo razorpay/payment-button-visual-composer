@@ -28,7 +28,7 @@ export default class RzpSubscriptionButton extends vcvAPI.elementComponent {
             )
         } else {
             return (
-                <div {...editor} id={`el-${id}`} {...doAll}>
+                <div className='vcvhelper' data-vcvs-html="" {...editor} id={`el-${id}`} {...doAll}>
                     Please select subscription button
                 </div>
             )
