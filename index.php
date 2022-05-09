@@ -1,4 +1,5 @@
 <?php
+
 /**
 Plugin Name: Razorpay Payment Button for Visual Composer
 Plugin URI: https://github.com/razorpay/payment-button-visual-composer
@@ -9,7 +10,8 @@ Author URI: https://razorpay.com
 */
 
 // don't load directly
-if (!defined('ABSPATH')) {
+if (!defined('ABSPATH'))
+{
     die('-1');
 }
 
@@ -28,7 +30,8 @@ add_action('admin_post_rzp_btn_visual_composer_action', 'razorpay_payment_button
 
 function bootstrap_scripts_enqueue_visual_composer($hook_suffix)
 {
-    if ($hook_suffix != 'admin_page_rzp_button_view_visual_composer') {
+    if ($hook_suffix != 'admin_page_rzp_button_view_visual_composer')
+    {
         return;
     }
     wp_register_style('bootstrap-css-visual-composer', plugin_dir_url(__FILE__)  . 'public/css/bootstrap.min.css',
@@ -44,14 +47,17 @@ function bootstrap_scripts_enqueue_visual_composer($hook_suffix)
 /**
  * This is the RZP Payment button loader class.
  */
-if (!class_exists('RZP_VC_Payment_Button_Loader')) {
+if (!class_exists('RZP_VC_Payment_Button_Loader'))
+{
 
     // Adding constants
-    if (!defined('RZP_VC_BASE_NAME')) {
+    if (!defined('RZP_VC_BASE_NAME'))
+    {
         define('RZP_VC_BASE_NAME', plugin_basename(__FILE__));
     }
 
-    if (!defined('RZP_REDIRECT_URL')) {
+    if (!defined('RZP_REDIRECT_URL'))
+    {
         // admin-post.php is a file that contains methods for us to process HTTP requests
         define('RZP_REDIRECT_URL', esc_url(admin_url('admin-post.php')));
     }
@@ -105,7 +111,7 @@ if (!class_exists('RZP_VC_Payment_Button_Loader')) {
 
             $secret = get_option('key_secret_field');
 
-            if (empty($key) === false && empty($secret) === false)
+            if (empty($key) === false and empty($secret) === false)
             {
                 return new Api($key, $secret);
             }
@@ -122,6 +128,7 @@ if (!class_exists('RZP_VC_Payment_Button_Loader')) {
         {
             $pluginLinks = array(
                 'settings' => '<a href="'. esc_url(admin_url('admin.php?page=razorpay_visual_composer_settings')) .'">Settings</a>',
+                'Docs' => '<a href="https://razorpay.com/docs/payments/payment-button/supported-platforms/wordpress/visual-composer/">Docs</a>',
                 'support'  => '<a href="https://razorpay.com/contact/">Support</a>'
             );
 
@@ -183,7 +190,8 @@ add_action(
  * @param $api \VisualComposer\Modules\Api\Factory
  */
     'vcv:api',
-    function ($api) {
+    function ($api)
+    {
         $elementsToRegister = [
             'rzpPaymentButton',
             'rzpSubscriptionButton'
@@ -191,7 +199,8 @@ add_action(
         $pluginBaseUrl = rtrim(plugins_url(basename(__DIR__)), '\\/');
         /** @var \VisualComposer\Modules\Elements\ApiController $elementsApi */
         $elementsApi = $api->elements;
-        foreach ($elementsToRegister as $tag) {
+        foreach ($elementsToRegister as $tag)
+        {
             $manifestPath = __DIR__ . '/elements/' . $tag . '/manifest.json';
             $elementBaseUrl = $pluginBaseUrl . '/elements/' . $tag;
             $elementsApi->add($manifestPath, $elementBaseUrl);

@@ -1,4 +1,5 @@
 <?php
+
 require_once __DIR__.'/../templates/razorpay-settings-templates.php';
 
 class RZP_Payment_Button_Visual_Composer_Setting
@@ -23,7 +24,7 @@ class RZP_Payment_Button_Visual_Composer_Setting
         $this->template->razorpaySettings();
     }
 
-	/**
+    /**
      * Uses Settings API to create fields
     **/
     function displayOptions()
