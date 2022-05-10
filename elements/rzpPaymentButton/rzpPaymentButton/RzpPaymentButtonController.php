@@ -4,9 +4,11 @@ namespace rzpPaymentButton\rzpPaymentButton;
 require_once __DIR__.'/../../../razorpay-sdk/Razorpay.php';
 use Razorpay\Api\Api;
 
-if (!defined('ABSPATH')) {
+if (!defined('ABSPATH'))
+{
     header('Status: 403 Forbidden');
     header('HTTP/1.1 403 Forbidden');
+
     return;
 }
 
@@ -22,7 +24,8 @@ class RzpPaymentButtonController extends Container implements Module
 
     public function __construct()
     {
-        if (!defined('VCV_PAYMENT_BUTTON')) {
+        if (!defined('VCV_PAYMENT_BUTTON'))
+        {
             $this->addFilter('vcv:editor:variables vcv:editor:variables/rzpPaymentButton', 'getVariables');
             define('VCV_PAYMENT_BUTTON', true);
         }
@@ -37,14 +40,18 @@ class RzpPaymentButtonController extends Container implements Module
         $buttonsData = $this->get_payment_buttons();
         $buttons = [];
         $buttons[] = ['label' => __('Select payment button', 'razorpay'), 'value' => 0];
-        if ($buttonsData) {
-            foreach ($buttonsData['items'] as $item) {
+        if ($buttonsData)
+        {
+            foreach ($buttonsData['items'] as $item)
+            {
                 $buttons[] = [
                     'label' => $item['title'],
                     'value' => $item['id'],
                 ];
             }
-        } else {
+        }
+        else
+        {
             $buttons = [
                 ['label' => __('No Payment buttons found', 'razorpay'), 'value' => 0],
             ];
@@ -53,6 +60,7 @@ class RzpPaymentButtonController extends Container implements Module
             'key' => 'rzpPaymentBtn',
             'value' => $buttons,
         ];
+
         return $variables;
     }
 
@@ -65,7 +73,13 @@ class RzpPaymentButtonController extends Container implements Module
 
         try
         {
-            return $items = $api->paymentPage->all(['view_type' => 'button', "status" => 'active', 'count'=> 100]);
+            return $items = $api->paymentPage->all(
+                [
+                    'view_type' => 'button',
+                    "status" => 'active',
+                    'count'=> 100
+                ]
+            );
         }
         catch (\Exception $e)
         {
@@ -86,7 +100,8 @@ class RzpPaymentButtonController extends Container implements Module
 
         $secret = get_option('key_secret_field');
 
-        if (empty($key) === false && empty($secret) === false) {
+        if (empty($key) === false and empty($secret) === false)
+        {
             return new Api($key, $secret);
         }
 
