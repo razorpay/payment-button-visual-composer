@@ -7,6 +7,8 @@ class RZP_Payment_Button_Visual_Composer_Templates
     **/
     function razorpaySettings()
     {
+		settings_errors();
+		
         echo
             '<div class="wrap">
                 <h2>Razorpay Payment Button Settings</h2>

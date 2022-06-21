@@ -117,7 +117,7 @@ if (!class_exists('RZP_VC_Payment_Button_Loader'))
             }
 
             wp_die('<div class="error notice">
-                        <p>RAZORPAY ERROR: Payment button fetch failed.</p>
+                        <p>RAZORPAY ERROR: Please set Razorpay Key Id and Secret in plugin settings.</p>
                      </div>');
         }
 
