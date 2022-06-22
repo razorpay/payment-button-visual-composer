@@ -1,8 +1,8 @@
 === Razorpay Payment Button for Visual Composer ===
 Contributors: razorpay
 Tags: Payment gateway, Donate button, UPI/credit/debit card, Payment plugin, Payment Button, Subscription Button, India, e-commerce, education.
-Tested up to: 5.9.3
-Stable tag: 1.0.1
+Tested up to: 6.0
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -91,6 +91,12 @@ Connect your WordPress website with your Razorpay account and you're all ready t
 
 
 == Changelog ==
+
+= 1.0.2 =
+* Fix fatal error: Cannot use isset() on the result of an expression
+* Fixed 'constant already defined' error in sdk
+* Added Subscription button plan details
+* Tested upto WordPress 6.0
 
 = 1.0.1 =
 * Updated Razorpay PHP SDK

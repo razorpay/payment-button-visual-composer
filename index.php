@@ -4,7 +4,7 @@
 Plugin Name: Razorpay Payment Button for Visual Composer
 Plugin URI: https://github.com/razorpay/payment-button-visual-composer
 Description: Razorpay Payment Button for Visual Composer plugin accepts to collect one time and recurring payments on your website.
-Version: 1.0.1
+Version: 1.0.2
 Author: Razorpay
 Author URI: https://razorpay.com
 */
@@ -117,7 +117,7 @@ if (!class_exists('RZP_VC_Payment_Button_Loader'))
             }
 
             wp_die('<div class="error notice">
-                        <p>RAZORPAY ERROR: Payment button fetch failed.</p>
+                        <p>RAZORPAY ERROR: Please set Razorpay Key Id and Secret in plugin settings.</p>
                      </div>');
         }
 
